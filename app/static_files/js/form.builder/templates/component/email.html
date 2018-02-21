@@ -1,0 +1,6 @@
+<!-- Email -->
+<div class="form-group{{ if(field.required) { }} required-control{{ } }}{{ if (field.containerClass) { }} {{= field.containerClass }}{{ } }}">
+    {{ if (field.label) { }}<label {{ if (field.labelClass) { }} class="{{= field.labelClass }}"{{ } }} for="{{= field.id }}">{{= field.label }}</label>{{ } }}
+    <input type="email" id="{{= field.id }}" name="{{= field.id }}" value="{{= field.predefinedValue }}"{{ if (field.pattern) { }} pattern="{{= field.pattern }}"{{ } }}{{ if (field.placeholder) { }} placeholder="{{= field.placeholder }}"{{ } }}{{ if (field.checkdns) { }} data-check-dns="true"{{ } }}{{ if (field.cssClass) { }} class="{{= field.cssClass }}"{{ } }}{{ if (field.multiple) { }} multiple{{ } }}{{ if(field.required) {}} required{{ } }}{{ if (field.unique) { }} data-unique="{{= field.unique }}"{{ } }}{{ if(field.readOnly) { }} readOnly{{ } }}{{ if(field.disabled) { }} disabled{{ } }}>{{ if (field.helpText) { }}
+    <p class="help-block">{{= field.helpText }}</p>{{ } }}
+</div>

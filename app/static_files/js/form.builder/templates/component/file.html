@@ -1,0 +1,6 @@
+<!-- File -->
+<div class="form-group{{ if(field.required) { }} required-control{{ } }}{{ if (field.containerClass) { }} {{= field.containerClass }}{{ } }}">
+    {{ if (field.label) { }}<label {{ if (field.labelClass) { }} class="{{= field.labelClass }}"{{ } }} for="{{= field.id }}">{{= field.label }}</label>{{ } }}
+    <input type="file" id="{{= field.id }}" name="{{= field.id }}" accept="{{= field.accept }}" {{ if (field.minSize) { }} data-min-size="{{= field.minSize }}" {{ } }}{{ if(field.maxSize) { }}data-max-size="{{= field.maxSize }}" {{ } }}{{ if(field.cssClass) { }}class="{{= field.cssClass }}" {{ } }} {{ if(field.required){ }}required {{ } }}{{ if(field.readOnly) { }}readOnly {{ } }}{{ if(field.disabled) { }}disabled {{ } }}>{{ if (field.helpText) { }}
+    <p class="help-block">{{= field.helpText }}</p>{{ } }}
+</div>

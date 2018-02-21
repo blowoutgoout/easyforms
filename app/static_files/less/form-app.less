@@ -1,0 +1,265 @@
+//
+// Form App
+// --------------------------------------------------
+
+/*
+ * Form Vertical
+ */
+//#canvas .component.checkbox,
+//#canvas .component.radio {
+//  margin-left: 0;
+//  margin-bottom: 0;
+//}
+//#canvas .checkbox .control-label,
+//#canvas .radio .control-label {
+//  font-weight: bold;
+//  margin-bottom: 5px;
+//  padding-left: 0;
+//}
+//#canvas .checkbox .inline-control .control-label,
+//#canvas .radio .inline-control .control-label {
+//  width: 100%;
+//}
+//#canvas .checkbox input[type=checkbox], #canvas .checkbox-inline input[type=checkbox],
+//#canvas .radio input[type=radio], #canvas .radio-inline input[type=radio] {
+//  position: relative;
+//  margin-left: 0;
+//}
+//#canvas .required-control .control-label:after {
+//  content: " *";
+//  color: #fc4c5e;
+//}
+
+/*
+ * General
+ */
+#form-app .required-control .control-label:after {
+  content: " *";
+  color: @brand-danger;
+}
+
+/*
+ * Multi Step
+ */
+#form-app, #my-form {
+  .form-action {
+    //margin-bottom: 15px;
+  }
+  .progress {
+    margin-top: 5px;
+    .progress-bar {
+      min-width: 2em;
+    }
+  }
+  .steps {
+    margin-bottom: 10px;
+    padding-top: 5px;
+    overflow: hidden;
+    text-align: center;
+
+    .step {
+      display: inline-block;
+      position: relative;
+      margin-right: -4px; /* Fix space between each step */
+      text-align: center;
+      min-height: 28px;
+      line-height: 28px;
+
+      &:before, &:after {
+        position: absolute;
+        background-color: #E6E9ED;
+        top: 11px;
+        margin-top: 0;
+        width: 50%;
+        height: 6px;
+        content: '';
+      }
+      &:before {
+        left: 0;
+      }
+      &:after {
+        right: 0;
+      }
+      &:first-child:before {
+        content: none;
+      }
+      &:last-child:after {
+        content: none;
+      }
+      &.no-stage:before, &.no-stage:after {
+        content: none;
+      }
+      &.current .stage {
+        background-color: #92a1ad;
+        color: #FFFFFF;
+      }
+      &.current:after, &.current:before {
+        background-color: #92a1ad;
+      }
+      &.success .stage {
+        background-color: #92a1ad;
+        color: #FFFFFF;
+      }
+      &.success:after, &.success:before {
+        background-color: #92a1ad;
+      }
+      .stage {
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        background-color: #E6E9ED;
+        color: #627483;
+        text-align: center;
+        font-size: 18px;
+        position: relative;
+        z-index: 1;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+      }
+      .stage .glyphicon {
+        font-size: 15px;
+      }
+      .title {
+        padding-right: 5px;
+        padding-left: 5px;
+      }
+      &:first-child .title {
+        padding-left: 0;
+      }
+    }
+    .no-title {
+      width: 48px;
+      &:first-child {
+        width: 38px;
+        text-align: left;
+      }
+    }
+    .no-stage {
+      .title {
+        padding: 0 10px;
+        margin: 0 5px 5px 5px;
+        border: 1px solid #6e8292;
+        border-radius: 4px;
+        text-align: center;
+      }
+      &:first-child {
+        .title {
+          padding: 0 10px;
+        }
+      }
+      &.current {
+        .title {
+          color: #ffffff;
+          background-color: #6e8292;
+          border-color: #637584;
+        }
+      }
+    }
+
+  }
+
+}
+
+/*
+ * Form Horizontal
+ */
+
+#form-app.form-horizontal .legend,
+#form-app.form-horizontal .description,
+#form-app.form-horizontal .form-group {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/*
+ * Form Inline
+ */
+
+#form-app.form-inline {
+  width: 100%;
+}
+#form-app.form-inline .legend {
+  display: block;
+}
+#form-app.form-inline .form-group, #form-app.form-inline .form-action {
+  display: inline-block;
+}
+#form-app.form-inline .form-action {
+  margin-top: -1px;
+}
+#form-app.form-inline .checkbox .control-label,
+#form-app.form-inline .radio .control-label {
+  margin-bottom: 0;
+}
+#form-app.form-inline .form-group .control-label {
+  display: none;
+}
+#form-app.form-inline .help-block {
+  display: none;
+}
+#form-app.form-inline input[type=file] {
+  display: inline-block;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+  /*
+   * Form Horizontal
+   */
+  #form-app.form-horizontal .legend,
+  #form-app.form-horizontal .description {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 25%;
+  }
+  #form-app.form-horizontal .form-group .control-label {
+    width: 25%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  #form-app.form-horizontal .form-group .form-control {
+    width: 75%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  #form-app.form-horizontal .form-group .checkbox,
+  #form-app.form-horizontal .form-group .radio
+  {
+    margin-left: 25%;
+    padding-top: 0;
+  }
+  /* When no label, controls keep their position */
+  #form-app.form-horizontal .form-group textarea:first-child,
+  #form-app.form-horizontal .form-group select:first-child,
+  #form-app.form-horizontal .form-group input[type="text"]:first-child,
+  #form-app.form-horizontal .form-group input[type="email"]:first-child,
+  #form-app.form-horizontal .form-group input[type="tel"]:first-child,
+  #form-app.form-horizontal .form-group input[type="url"]:first-child,
+  #form-app.form-horizontal .form-group input[type="color"]:first-child,
+  #form-app.form-horizontal .form-group input[type="password"]:first-child,
+  #form-app.form-horizontal .form-group input[type="number"]:first-child,
+  #form-app.form-horizontal .form-group input[type="range"]:first-child,
+  #form-app.form-horizontal .form-group input[type="date"]:first-child,
+  #form-app.form-horizontal .form-group input[type="time"]:first-child,
+  #form-app.form-horizontal .form-group input[type="datetime-local"]:first-child,
+  #form-app.form-horizontal .form-group input[type="month"]:first-child,
+  #form-app.form-horizontal .form-group input[type="week"]:first-child,
+  #form-app.form-horizontal .form-group input[type="file"]:first-child,
+  #form-app.form-horizontal .form-action input[type="image"]:first-child,
+  #form-app.form-horizontal .form-action input[type="reset"]:first-child,
+  #form-app.form-horizontal .form-action input[type="submit"]:first-child {
+    margin-left: 25%;
+  }
+  #form-app.form-horizontal .form-group .help-block {
+    margin-left: 25%;
+    clear: both;
+    margin-bottom: 0;
+  }
+
+}
+

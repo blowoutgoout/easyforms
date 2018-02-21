@@ -1,0 +1,8 @@
+
+<form class="form">{{= basicFields }}{{ if (advancedFields) { }}
+<p><a id="collapseLink" href="javascript:void(0)" data-toggle="collapse" data-target="#collapseAdvancedFields" aria-expanded="false" aria-controls="collapseAdvancedFields">{{= polyglot.t('popover.more') }}</a></p>
+<div class="collapse" id="collapseAdvancedFields">
+{{= advancedFields }}</div>{{ } }}
+<hr/>
+<button id="save" class="btn btn-primary">{{= polyglot.t('popover.save') }}</button> <button id="delete" class="btn btn-danger">{{= polyglot.t('popover.delete') }}</button> <button id="cancel" class="btn btn-default">{{= polyglot.t('popover.cancel') }}</button>
+</form>

@@ -1,0 +1,131 @@
+
+/* ----------------------------------
+ * Rules Builder
+ * ---------------------------------- */
+
+.ui-sortable-placeholder {
+    border: 1px dashed #d5d8dc;
+    border-radius: 4px;
+    background: rgba(243, 245, 247, 0.2);
+    height: 125px;
+    margin-bottom: 15px;
+}
+
+.rule-builder .rules-group-container {
+    padding: 20px;
+    border: 1px solid #d5d8dc;
+    border-radius: 4px;
+    background: rgba(243, 245, 247, 0.5);
+    margin-bottom: 15px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.rule-builder .form-control {
+    display: inline;
+    width: auto;
+    min-width: 70px;
+}
+
+.checkbox {
+    margin-bottom: 0;
+}
+
+.checkbox input[type=checkbox]:checked + label:after {
+    font-family: 'Glyphicons Regular';
+    content: "\e207";
+}
+
+.checkbox label:after {
+    padding-left: 3px;
+    padding-top: 0px;
+    font-size: 0.875em;
+}
+
+.rule-builder-conditions > .conditional > .remove, .rule-builder-actions > .conditional > .remove {
+    display: none;
+}
+
+.rule-builder .conditional {
+    padding-left: 70px;
+}
+
+.rule-builder .conditional .all-any-none-wrapper {
+    margin: 0 20px 0 -70px;
+    display: -moz-inline-stack;
+    display: inline-block;
+}
+
+.rule-builder .add-rule, .rule-builder .add-condition, .rule-builder .remove {
+    margin: auto 5px;
+}
+
+.rule-builder .conditional .conditional {
+    margin-top: 10px;
+    padding: 10px 10px 10px 80px;
+    border: 1px solid #d5d8dc;
+    border-radius: 5px;
+    background: rgba(243, 245, 247, 0.5);
+}
+
+.rule-builder .rule {
+    margin-top: 5px;
+}
+
+.rule-builder .rule input {
+    margin-top: 5px;
+    margin-right: 10px;
+    width: 250px;
+    max-width: 250px;
+}
+
+.rule-builder .rule select {
+    margin-top: 5px;
+    margin-right: 10px;
+    max-width: 200px;
+}
+
+.rule-builder .action-buttons {
+    margin: 20px 0;
+}
+
+.rule-builder .action {
+    margin: 5px 0;
+}
+
+.rule-builder .action .subfields, .rule-builder .action .subfields .field {
+    display: inline;
+}
+
+.rule-builder .action .subfields .control-label, .rule-builder .action .subfields .field .control-label {
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+.rule-builder .action select, .rule-builder .action input, .rule-builder .action textarea {
+    margin-top: 5px;
+    margin-right: 10px;
+    max-width: 250px;
+}
+
+.rule-builder .action select[multiple] {
+    vertical-align: top;
+    overflow: scroll;
+}
+
+.rule-builder .action textarea, .rule-builder .action input {
+    /*width: 250px;*/
+}
+
+.rule-builder .action textarea {
+    vertical-align: top;
+    height: 50px;
+}
+
+.rule-builder .settings {
+    text-align: right;
+}
+
+.rule-builder .settings .checkbox {
+    display: inline-block;
+    margin-left: 15px;
+}
